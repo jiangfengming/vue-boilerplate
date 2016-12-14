@@ -10,7 +10,7 @@
 
 <style scoped>
 .foo {
-  color: blue;
+  color: blue
 }
 </style>
 
@@ -26,13 +26,13 @@ export default {
         VERSION: VERSION, //eslint-disable-line
         CONFIG: CONFIG //eslint-disable-line
       }
-    };
+    }
   },
 
   methods: {
     json(object) {
-      return JSON.stringify(object, null, 2);
+      return JSON.stringify(object, null, 2)
     }
   }
-};
+}
 </script>

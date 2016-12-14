@@ -1,12 +1,12 @@
-const { resolve } = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const pkgInfo = require('./package.json');
+const { resolve } = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const pkgInfo = require('./package.json')
 
 module.exports = function(options = {}) {
-  const config = require('./config/' + (process.env.npm_config_config || 'default'));
+  const config = require('./config/' + (process.env.npm_config_config || 'default'))
 
-  return {
+  const cfg = {
     entry: {
       vendor: './src/vendor',
       index: './src/index'
@@ -93,7 +93,19 @@ module.exports = function(options = {}) {
       })
     ],
 
-    devServer: {
+    resolve: {
+      alias: {
+        '~': resolve(__dirname, 'src')
+      }
+    }
+  }
+
+  if (options.dev) {
+    cfg.performance = { hints: false }
+  }
+
+  if (config.devServer) {
+    cfg.devServer = {
       host: '0.0.0.0',
       port: config.devServer.port,
       historyApiFallback: {
@@ -101,12 +113,8 @@ module.exports = function(options = {}) {
       },
 
       proxy: config.devServer.proxy
-    },
-
-    resolve: {
-      alias: {
-        '~': resolve(__dirname, 'src')
-      }
     }
-  };
-};
+  }
+
+  return cfg
+}
