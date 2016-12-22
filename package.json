@@ -11,11 +11,13 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.5.4",
-    "babel-core": "^6.20.0",
-    "babel-loader": "^6.2.9",
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.10",
     "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-3": "^6.17.0",
     "css-loader": "^0.26.1",
-    "eslint": "^3.12.1",
+    "eslint": "^3.12.2",
     "eslint-config-enough": "^0.2.0",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-html": "^1.7.0",
@@ -28,8 +30,8 @@
     "url-loader": "^0.5.7",
     "vue-loader": "^10.0.2",
     "vue-template-compiler": "^2.1.6",
-    "webpack": "^2.1.0-beta.28",
-    "webpack-dev-server": "^2.1.0-beta.12"
+    "webpack": "^2.2.0-rc.1",
+    "webpack-dev-server": "^2.2.0-rc.0"
   },
   "babel": {
     "presets": [
@@ -41,10 +43,13 @@
             "modules": false
           }
         }
-      ]
+      ],
+
+      "stage-3"
     ]
   },
   "eslintConfig": {
+    "parser": "babel-eslint",
     "extends": "enough",
     "env": {
       "browser": true,
@@ -62,6 +67,6 @@
   "dependencies": {
     "vue": "^2.1.6",
     "vue-router": "^2.1.1",
-    "vuex": "^2.0.0"
+    "vuex": "^2.1.1"
   }
 }
