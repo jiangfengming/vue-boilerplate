@@ -4,9 +4,9 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const routes = [
-  { path: '/', component: () => System.import('./views/Index.vue') },
-  { path: '/foo', component: () => System.import('./views/Foo.vue') },
-  { path: '*', component: () => System.import('./views/HTTP404.vue') }
+  { path: '/', component: () => import('./views/Index.vue') },
+  { path: '/foo', component: () => import('./views/Foo.vue') },
+  { path: '*', component: () => import('./views/HTTP404.vue') }
 ]
 
 const router = new Router({

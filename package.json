@@ -10,12 +10,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^6.5.4",
+    "autoprefixer": "^6.6.0",
     "babel-core": "^6.21.0",
-    "babel-eslint": "^6.1.2",
+    "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
     "babel-preset-latest": "^6.16.0",
-    "babel-preset-stage-3": "^6.17.0",
+    "babel-preset-stage-2": "^6.18.0",
     "css-loader": "^0.26.1",
     "eslint": "^3.12.2",
     "eslint-config-enough": "^0.2.0",
@@ -30,7 +30,7 @@
     "url-loader": "^0.5.7",
     "vue-loader": "^10.0.2",
     "vue-template-compiler": "^2.1.6",
-    "webpack": "^2.2.0-rc.1",
+    "webpack": "^2.2.0-rc.2",
     "webpack-dev-server": "^2.2.0-rc.0"
   },
   "babel": {
@@ -44,8 +44,7 @@
           }
         }
       ],
-
-      "stage-3"
+      "stage-2"
     ]
   },
   "eslintConfig": {
