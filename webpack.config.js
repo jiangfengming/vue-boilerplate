@@ -24,7 +24,15 @@ module.exports = (options = {}) => {
       rules: [
         {
           test: /\.vue$/,
-          use: ['vue-loader', 'eslint-loader']
+          use: [
+            {
+              loader: 'vue-loader',
+              options: {
+                postcss: [require('autoprefixer')()]
+              }
+            },
+            'eslint-loader'
+          ]
         },
 
         {
