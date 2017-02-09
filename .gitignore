@@ -1,8 +1,9 @@
 node_modules
 npm-debug.log*
+debug.log
 .DS_Store
 .idea
 .vscode
 conf/*
 !conf/default.js
-!conf/production.js
+!conf/dev.js

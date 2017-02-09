@@ -15,17 +15,13 @@
 </style>
 
 <script>
+import config from '~/config'
+
 export default {
   data() {
     return {
       a: 0,
-
-      // can not use object-shorthand, because the tokens will be replaced by webpack.DefinePlugin
-      config: {
-        DEBUG: DEBUG, //eslint-disable-line
-        VERSION: VERSION, //eslint-disable-line
-        CONFIG: CONFIG //eslint-disable-line
-      }
+      config
     }
   },
 
