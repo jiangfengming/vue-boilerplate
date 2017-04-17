@@ -1,27 +1,11 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
+import Store from './Store'
+import createFoo from './foo'
 
-Vue.use(Vuex)
+Vue.use(Store)
 
-export default new Vuex.Store({
-  state: {
-    count: 0
-  },
-
-  mutations: {
-    increment(state) {
-      state.count++
-    }
-  },
-
-  actions: {
-    asyncIncrement({ commit }) {
-      return new Promise(resolve => {
-        setTimeout(() => {
-          commit('increment')
-          resolve()
-        })
-      })
-    }
-  }
-})
+export default function() {
+  return Store.create({
+    foo: createFoo()
+  })
+}

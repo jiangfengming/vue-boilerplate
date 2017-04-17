@@ -9,9 +9,9 @@ const routes = [
   { path: '*', component: () => import('./views/HTTP404.vue') }
 ]
 
-const router = new Router({
-  mode: 'history',
-  routes
-})
-
-export default router
+export default function() {
+  return new Router({
+    mode: 'history',
+    routes
+  })
+}
